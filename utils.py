@@ -93,7 +93,10 @@ def set_up(num_of_columns):
     :param num_of_columns: number of classrooms
     :return: matrix, free
     """
-    w, h = num_of_columns, 60                                          # 5 (workdays) * 12 (work hours) = 60
+    work_hours = 8
+    work_days = 5
+    w, h = num_of_columns, work_hours*work_days                                         
+    # 5 (workdays) * 12 (work hours) = 60
     matrix = [[None for x in range(w)] for y in range(h)]
     free = []
 
@@ -109,7 +112,7 @@ def show_timetable(matrix):
     Prints timetable matrix.
     """
     days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday']
-    hours = [9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
+    hours = [9, 10, 11, 12, 13, 14, 15, 16]
 
     # print heading for classrooms
     for i in range(len(matrix[0])):
@@ -129,7 +132,7 @@ def show_timetable(matrix):
             print('{:6s} '.format(str(matrix[i][j])), end='')
         print()
         h_cnt += 1
-        if h_cnt == 12:
+        if h_cnt == 8:
             h_cnt = 0
             d_cnt += 1
             print()

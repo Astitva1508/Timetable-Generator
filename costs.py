@@ -10,7 +10,7 @@ def subjects_order_cost(subjects_order):
     cost = 0
     # number of all orders of subjects
     total = 0
-
+    print(subjects_order)
     for (subject, group_index), times in subjects_order.items():
 
         if times[0] != -1 and times[1] != -1:
