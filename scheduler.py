@@ -136,7 +136,7 @@ def mutate_ideal_spot(matrix, data, ind_class, free, filled, groups_empty_space,
         # check if class won't start one day and end on the next
         start_time = start_field[0]
         end_time = start_time + int(classs.duration) - 1
-        if start_time % 12 > end_time % 12:
+        if start_time % 8 > end_time % 8:
             ind += 1
             continue
 
@@ -321,7 +321,7 @@ def main():
     subjects_order = {}
     groups_empty_space = {}
     teachers_empty_space = {}
-    file = 'ulaz4.txt'
+    file = 'input_file_1.txt'
 
     data = load_data('test_files/' + file, teachers_empty_space, groups_empty_space, subjects_order)
     matrix, free = set_up(len(data.classrooms))

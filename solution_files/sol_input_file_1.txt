@@ -1,0 +1,502 @@
+-------------------------- STATISTICS --------------------------
+
+Hard constraints satisfied: 100.00 %
+Soft constraints satisfied: 100.00 %
+
+TOTAL empty space for all GROUPS and all days: 4
+MAX empty space for GROUP in day: 2
+AVERAGE empty space for GROUPS per week: 0.44
+
+TOTAL empty space for all TEACHERS and all days: 22
+MAX empty space for TEACHER in day: 6
+AVERAGE empty space for TEACHERS per week: 1.00
+
+Free term -> Monday: 17
+
+--------------------------- SCHEDULE ---------------------------
+
+Class 42
+Teacher: Dr. Meghna 
+Subject: Microprocessor and Interfacing 
+Groups:CS22 
+Type: L 
+Duration: 2 hour(s)
+Classroom: B2 
+Time: Wednesday 13 14
+
+Class 11
+Teacher: Dr. Jitendra 
+Subject: Material Science 
+Groups:CS11 
+Type: L 
+Duration: 2 hour(s)
+Classroom: G1 
+Time: Thursday 11 12
+
+Class 3
+Teacher: Dr. Mahto 
+Subject: AI 
+Groups:CS41 
+Type: L 
+Duration: 2 hour(s)
+Classroom: G6 
+Time: Wednesday 19 20
+
+Class 45
+Teacher: Dr. Yaseena 
+Subject: Communication Skills 
+Groups:CS11 
+Type: L 
+Duration: 2 hour(s)
+Classroom: G4 
+Time: Monday 15 16
+
+Class 39
+Teacher: Dr. Jai Prakash 
+Subject: Engineering Chemistry 
+Groups:CS12 
+Type: L 
+Duration: 2 hour(s)
+Classroom: G5 
+Time: Monday 15 16
+
+Class 20
+Teacher: Dr. Meghna 
+Subject: OOPs 
+Groups:CS22 
+Type: L 
+Duration: 2 hour(s)
+Classroom: B1 
+Time: Tuesday 11 12
+
+Class 51
+Teacher: Dr. Mallick 
+Subject: Digital Image Processing 
+Groups:CS32 
+Type: L 
+Duration: 2 hour(s)
+Classroom: B1 
+Time: Wednesday 13 14
+
+Class 19
+Teacher: Dr. Arun 
+Subject: TOC 
+Groups:CS32 
+Type: L 
+Duration: 2 hour(s)
+Classroom: B3 
+Time: Wednesday 9 10
+
+Class 4
+Teacher: Dr. Pooja 
+Subject: Computer Programming 
+Groups:CS11 
+Type: L 
+Duration: 2 hour(s)
+Classroom: B1 
+Time: Wednesday 9 10
+
+Class 12
+Teacher: Dr. Pooja 
+Subject: Computer Programming 
+Groups:CS12 
+Type: L 
+Duration: 2 hour(s)
+Classroom: B5 
+Time: Tuesday 17 18
+
+Class 50
+Teacher: Dr. Amit 
+Subject: Digital Electronics 
+Groups:CS21 
+Type: L 
+Duration: 2 hour(s)
+Classroom: B5 
+Time: Tuesday 15 16
+
+Class 15
+Teacher: Dr. Suket 
+Subject: Engineering Mathematics III 
+Groups:CS22 
+Type: L 
+Duration: 2 hour(s)
+Classroom: B3 
+Time: Wednesday 15 16
+
+Class 32
+Teacher: Dr. Preeti Soni 
+Subject: Cyber Forensics 
+Groups:CS42 
+Type: L 
+Duration: 2 hour(s)
+Classroom: G1 
+Time: Wednesday 9 10
+
+Class 33
+Teacher: Dr. Priyanka 
+Subject: Discrete Structures 
+Groups:CS21 
+Type: L 
+Duration: 2 hour(s)
+Classroom: B3 
+Time: Wednesday 13 14
+
+Class 38
+Teacher: Dr. Meghna 
+Subject: OOPs 
+Groups:CS21 
+Type: L 
+Duration: 2 hour(s)
+Classroom: G5 
+Time: Tuesday 17 18
+
+Class 1
+Teacher: Dr. Pardeep 
+Subject: Operating System 
+Groups:CS32 
+Type: P 
+Duration: 2 hour(s)
+Classroom: G1 
+Time: Wednesday 15 16
+
+Class 21
+Teacher: Dr. Pardeep 
+Subject: Operating System 
+Groups:CS31 
+Type: P 
+Duration: 2 hour(s)
+Classroom: B3 
+Time: Monday 9 10
+
+Class 16
+Teacher: Dr. Yaseena 
+Subject: Communication Skills 
+Groups:CS12 
+Type: L 
+Duration: 2 hour(s)
+Classroom: G4 
+Time: Monday 13 14
+
+Class 48
+Teacher: Dr. Mahto 
+Subject: Distributed Systems 
+Groups:CS31 
+Type: L 
+Duration: 2 hour(s)
+Classroom: G6 
+Time: Monday 11 12
+
+Class 35
+Teacher: Dr. Arun 
+Subject: TOC 
+Groups:CS31 
+Type: L 
+Duration: 2 hour(s)
+Classroom: G1 
+Time: Wednesday 13 14
+
+Class 31
+Teacher: Dr. Preeti Soni 
+Subject: Cyber Forensics 
+Groups:CS41 
+Type: L 
+Duration: 2 hour(s)
+Classroom: G4 
+Time: Monday 9 10
+
+Class 22
+Teacher: Dr. Sidharth 
+Subject: DBMS 
+Groups:CS32 
+Type: P 
+Duration: 2 hour(s)
+Classroom: B2 
+Time: Wednesday 11 12
+
+Class 2
+Teacher: Dr. Arun 
+Subject: Compiler Design 
+Groups:CS31 
+Type: P 
+Duration: 2 hour(s)
+Classroom: G1 
+Time: Tuesday 17 18
+
+Class 24
+Teacher: Dr. Sidharth 
+Subject: DBMS 
+Groups:CS31 
+Type: P 
+Duration: 2 hour(s)
+Classroom: B4 
+Time: Thursday 11 12
+
+Class 14
+Teacher: Dr. Pardeep 
+Subject: Operating System 
+Groups:CS32 
+Type: L 
+Duration: 2 hour(s)
+Classroom: B5 
+Time: Wednesday 17 18
+
+Class 13
+Teacher: Dr. Naveen 
+Subject: Computer Graphics 
+Groups:CS31 
+Type: P 
+Duration: 2 hour(s)
+Classroom: G5 
+Time: Wednesday 11 12
+
+Class 23
+Teacher: Dr. Arun 
+Subject: Compiler Design 
+Groups:CS32 
+Type: P 
+Duration: 2 hour(s)
+Classroom: G5 
+Time: Tuesday 13 14
+
+Class 29
+Teacher: Dr. Suket 
+Subject: Engineering Mathematics III 
+Groups:CS21 
+Type: L 
+Duration: 2 hour(s)
+Classroom: B5 
+Time: Thursday 11 12
+
+Class 26
+Teacher: Dr. Tanuj Wala 
+Subject: Computer Network 
+Groups:CS32 
+Type: P 
+Duration: 2 hour(s)
+Classroom: B3 
+Time: Tuesday 9 10
+
+Class 46
+Teacher: Dr. Sangeeta 
+Subject: COA 
+Groups:CS22 
+Type: P 
+Duration: 2 hour(s)
+Classroom: G6 
+Time: Wednesday 17 18
+
+Class 43
+Teacher: Dr. Khaleed 
+Subject: Algorithm Analysis 
+Groups:CS31 
+Type: P 
+Duration: 2 hour(s)
+Classroom: G4 
+Time: Thursday 9 10
+
+Class 40
+Teacher: Dr. Bhavna 
+Subject: Organisational Behaviour 
+Groups:CS22 
+Type: L 
+Duration: 2 hour(s)
+Classroom: G2 
+Time: Thursday 11 12
+
+Class 0
+Teacher: Dr. Ramesh Kumar Vats 
+Subject: Engineering Mathematics II 
+Groups:CS12 
+Type: L 
+Duration: 2 hour(s)
+Classroom: B3 
+Time: Wednesday 11 12
+
+Class 41
+Teacher: Dr. Priyanka 
+Subject: Discrete Structures 
+Groups:CS22 
+Type: L 
+Duration: 2 hour(s)
+Classroom: B1 
+Time: Monday 15 16
+
+Class 47
+Teacher: Dr. Bharti Koul 
+Subject: Basic Electrical Engineering 
+Groups:CS11 
+Type: L 
+Duration: 2 hour(s)
+Classroom: G4 
+Time: Wednesday 15 16
+
+Class 49
+Teacher: Dr. Naveen 
+Subject: Computer Graphics 
+Groups:CS32 
+Type: P 
+Duration: 2 hour(s)
+Classroom: G1 
+Time: Wednesday 19 20
+
+Class 25
+Teacher: Dr. Pardeep 
+Subject: Operating System 
+Groups:CS31 
+Type: L 
+Duration: 2 hour(s)
+Classroom: G2 
+Time: Wednesday 9 10
+
+Class 6
+Teacher: Dr. Preeti Soni 
+Subject: Cyber Forensics 
+Groups:CS43 
+Type: L 
+Duration: 2 hour(s)
+Classroom: G2 
+Time: Thursday 9 10
+
+Class 36
+Teacher: Dr. Nitin 
+Subject: Data Structures 
+Groups:CS22 
+Type: P 
+Duration: 2 hour(s)
+Classroom: G3 
+Time: Thursday 9 10
+
+Class 7
+Teacher: Dr. Sangeeta 
+Subject: COA 
+Groups:CS21 
+Type: P 
+Duration: 2 hour(s)
+Classroom: G1 
+Time: Thursday 9 10
+
+Class 18
+Teacher: Dr. Mahto 
+Subject: AI 
+Groups:CS43 
+Type: L 
+Duration: 2 hour(s)
+Classroom: G3 
+Time: Wednesday 17 18
+
+Class 52
+Teacher: Dr. Mallick 
+Subject: Digital Image Processing 
+Groups:CS31 
+Type: L 
+Duration: 2 hour(s)
+Classroom: B3 
+Time: Monday 13 14
+
+Class 30
+Teacher: Dr. Bharti Koul 
+Subject: Basic Electrical Engineering 
+Groups:CS12 
+Type: L 
+Duration: 2 hour(s)
+Classroom: B3 
+Time: Thursday 11 12
+
+Class 10
+Teacher: Dr. Mahto 
+Subject: Distributed Systems 
+Groups:CS32 
+Type: L 
+Duration: 2 hour(s)
+Classroom: G3 
+Time: Monday 9 10
+
+Class 9
+Teacher: Dr. Meghna 
+Subject: Microprocessor and Interfacing 
+Groups:CS21 
+Type: L 
+Duration: 2 hour(s)
+Classroom: G6 
+Time: Wednesday 15 16
+
+Class 8
+Teacher: Dr. Jitendra 
+Subject: Material Science 
+Groups:CS12 
+Type: L 
+Duration: 2 hour(s)
+Classroom: G3 
+Time: Wednesday 13 14
+
+Class 27
+Teacher: Dr. Tanuj Wala 
+Subject: Computer Network 
+Groups:CS31 
+Type: P 
+Duration: 2 hour(s)
+Classroom: G5 
+Time: Tuesday 15 16
+
+Class 37
+Teacher: Dr. Amit 
+Subject: Digital Electronics 
+Groups:CS22 
+Type: L 
+Duration: 2 hour(s)
+Classroom: B1 
+Time: Monday 13 14
+
+Class 53
+Teacher: Dr. Khaleed 
+Subject: Algorithm Analysis 
+Groups:CS32 
+Type: P 
+Duration: 2 hour(s)
+Classroom: G2 
+Time: Monday 11 12
+
+Class 44
+Teacher: Dr. Ramesh Kumar Vats 
+Subject: Engineering Mathematics II 
+Groups:CS11 
+Type: L 
+Duration: 2 hour(s)
+Classroom: B2 
+Time: Thursday 9 10
+
+Class 17
+Teacher: Dr. Mahto 
+Subject: AI 
+Groups:CS42 
+Type: L 
+Duration: 2 hour(s)
+Classroom: B4 
+Time: Thursday 9 10
+
+Class 5
+Teacher: Dr. Nitin 
+Subject: Data Structures 
+Groups:CS21 
+Type: P 
+Duration: 2 hour(s)
+Classroom: G3 
+Time: Wednesday 19 20
+
+Class 28
+Teacher: Dr. Jai Prakash 
+Subject: Engineering Chemistry 
+Groups:CS11 
+Type: L 
+Duration: 2 hour(s)
+Classroom: B4 
+Time: Wednesday 13 14
+
+Class 34
+Teacher: Dr. Bhavna 
+Subject: Organisational Behaviour 
+Groups:CS21 
+Type: L 
+Duration: 2 hour(s)
+Classroom: G2 
+Time: Wednesday 17 18
