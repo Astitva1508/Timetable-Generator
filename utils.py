@@ -33,6 +33,12 @@ def load_data(file_path, teachers_empty_space, groups_empty_space, subjects_orde
     groups = {}
     class_list = []
 
+    # add classrooms
+    for type in data['Classrooms']:
+        for name in data['Classrooms'][type]:
+            new = Classroom(name, type)
+            classrooms[len(classrooms)] = new
+
     for cl in data['Classes']:
         new_group = cl['Groups']
         new_teacher = cl['Teacher']
@@ -41,7 +47,6 @@ def load_data(file_path, teachers_empty_space, groups_empty_space, subjects_orde
         if new_teacher not in teachers_empty_space:
             teachers_empty_space[new_teacher] = []
 
-        new = Class(new_group, new_teacher, cl['Subject'], cl['Type'], cl['Duration'], cl['Classroom'])
         # add groups
         for group in new_group:
             if group not in groups:
@@ -49,46 +54,37 @@ def load_data(file_path, teachers_empty_space, groups_empty_space, subjects_orde
                 # initialise for empty space of groups
                 groups_empty_space[groups[group]] = []
 
-        # add teacher
-        if new_teacher not in teachers:
-            teachers[new_teacher] = len(teachers)
-        class_list.append(new)
-
-    # shuffle mostly because of teachers
-    random.shuffle(class_list)
-    # add classrooms
-    for cl in class_list:
-        classes[len(classes)] = cl
-
-    # every class is assigned a list of classrooms he can be in as indexes (later columns of matrix)
-    for type in data['Classrooms']:
-        for name in data['Classrooms'][type]:
-            new = Classroom(name, type)
-            classrooms[len(classrooms)] = new
-
-    # every class has a list of groups marked by its index, same for classrooms
-    for i in classes:
-        cl = classes[i]
-
-        classroom = cl.classrooms
+        # every class is assigned a list of classrooms he can be in as indexes (later columns of matrix)
+        classroom = cl['Classroom']
         index_classrooms = []
         # add classrooms
         for index, c in classrooms.items():
             if c.type == classroom:
                 index_classrooms.append(index)
-        cl.classrooms = index_classrooms
 
-        class_groups = cl.groups
-        index_groups = []
-        
-        for name, index in groups.items():
-            if name in class_groups:
-                # initialise order of subjects
-                if (cl.subject, index) not in subjects_order:
-                    # index for L, V, P
-                    subjects_order[(cl.subject, index)] = [-1, -1, -1]
-                index_groups.append(index)
-        cl.groups = index_groups
+        for group in new_group:
+            group_idx = groups[group]
+            new = Class(group_idx,new_teacher,cl['Subject'],cl['Type'],cl['Duration'],index_classrooms)
+            class_list.append(new)
+
+
+        # add teacher
+        if new_teacher not in teachers:
+            teachers[new_teacher] = len(teachers)
+
+    # shuffle mostly because of teachers
+    random.shuffle(class_list)
+    
+    for cl in class_list:
+        classes[len(classes)] = cl
+
+    # every class has a list of groups marked by its index, same for classrooms
+    for i in classes:
+        cl = classes[i]
+
+        if (cl.subject, cl.groups) not in subjects_order:
+            # index for L, V, P
+            subjects_order[(cl.subject, cl.groups)] = [-1, -1, -1]
     return Data(groups, teachers, classes, classrooms)
 
 
@@ -188,9 +184,7 @@ def write_solution_to_file(matrix, data, filled, filepath, groups_empty_space, t
     f.write('\n--------------------------- SCHEDULE ---------------------------')
     for class_index, times in filled.items():
         c = data.classes[class_index]
-        groups = ' '
-        for g in c.groups:
-            groups += groups_dict[g] + ', '
+        groups = groups_dict[c.groups] + ', '
         f.write('\n\nClass {}\n'.format(class_index))
         f.write('Teacher: {} \nSubject: {} \nGroups:{} \nType: {} \nDuration: {} hour(s)'
                 .format(c.teacher, c.subject, groups[:len(groups) - 2], c.type, c.duration))

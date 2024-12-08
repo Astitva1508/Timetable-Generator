@@ -42,12 +42,12 @@ def initial_population(data, matrix, free, filled, groups_empty_space, teachers_
                 continue
 
             if found:
-                for group_index in classs.groups:
-                    # add order of the subjects for group
-                    insert_order(subjects_order, classs.subject, group_index, classs.type, start_time)
+                group_index = classs.groups
+                # add order of the subjects for group
+                insert_order(subjects_order, classs.subject, group_index, classs.type, start_time)
                     # add times of the class for group
-                    for i in range(int(classs.duration)):
-                        groups_empty_space[group_index].append(i + start_time)
+                for i in range(int(classs.duration)):
+                    groups_empty_space[group_index].append(i + start_time)
 
                 for i in range(int(classs.duration)):
                     filled.setdefault(index, []).append((i + start_time, start_field[1]))        # add to filled
@@ -108,9 +108,8 @@ def valid_teacher_group_row(matrix, data, index_class, row):
             if c1.teacher == c2.teacher:
                 return False
             # check groups
-            for g in c2.groups:
-                if g in c1.groups:
-                    return False
+            if(c2.groups==c1.groups):
+                return False
     return True
 
 
@@ -162,16 +161,16 @@ def mutate_ideal_spot(matrix, data, ind_class, free, filled, groups_empty_space,
                 free.append((f[0], f[1]))
                 matrix[f[0]][f[1]] = None
                 # remove empty space of the group from old place of the class
-                for group_index in classs.groups:
-                    groups_empty_space[group_index].remove(f[0])
+                group_index  = classs.groups
+                groups_empty_space[group_index].remove(f[0])
                 # remove teacher's empty space from old place of the class
                 teachers_empty_space[classs.teacher].remove(f[0])
 
             # update order of the subjects and add empty space for each group
-            for group_index in classs.groups:
-                insert_order(subjects_order, classs.subject, group_index, classs.type, start_time)
-                for i in range(int(classs.duration)):
-                    groups_empty_space[group_index].append(i + start_time)
+            group_index = classs.groups
+            insert_order(subjects_order, classs.subject, group_index, classs.type, start_time)
+            for i in range(int(classs.duration)):
+                groups_empty_space[group_index].append(i + start_time)
 
             # add new term of the class to filled, remove those fields from free dict and insert new block in matrix
             for i in range(int(classs.duration)):
@@ -331,9 +330,9 @@ def main():
     total, _, _, _, _ = hard_constraints_cost(matrix, data)
     print('Initial cost of hard constraints: {}'.format(total))
     evolutionary_algorithm(matrix, data, free, filled, groups_empty_space, teachers_empty_space, subjects_order)
-    # print('STATISTICS')
-    # show_statistics(matrix, data, subjects_order, groups_empty_space, teachers_empty_space)
-    # simulated_hardening(matrix, data, free, filled, groups_empty_space, teachers_empty_space, subjects_order, file)
+    print('STATISTICS')
+    show_statistics(matrix, data, subjects_order, groups_empty_space, teachers_empty_space)
+    simulated_hardening(matrix, data, free, filled, groups_empty_space, teachers_empty_space, subjects_order, file)
 
 
 if __name__ == '__main__':

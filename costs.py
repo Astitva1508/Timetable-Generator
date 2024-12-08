@@ -165,10 +165,10 @@ def hard_constraints_cost(matrix, data):
                         # calculate loss for groups
                         g1 = c1.groups
                         g2 = c2.groups
-                        for g in g1:
-                            if g in g2:
-                                cost_group += 1
-                                cost_class[field] += 1
+                        if(g1==g2):
+                            cost_group += 1
+                            cost_class[field] += 1
+                                
 
     total_cost = cost_teacher + cost_classrooms + cost_group
     return total_cost, cost_class, cost_teacher, cost_classrooms, cost_group
@@ -204,8 +204,7 @@ def check_hard_constraints(matrix, data):
                             g1 = c1.groups
                             g2 = c2.groups
                             # print(g1, g2)
-                            for g in g1:
-                                if g in g2:
-                                    overlaps += 1
+                            if(g1==g2):
+                                overlaps+=1
 
     return overlaps
