@@ -23,7 +23,7 @@ def initial_population(data, matrix, free, filled, groups_empty_space, teachers_
             # check if class won't start one day and end on the next
             start_time = start_field[0]
             end_time = start_time + int(classs.duration) - 1
-            if start_time % 12 > end_time % 12:
+            if start_time % 8 > end_time % 8:
                 ind += 1
                 continue
 
@@ -322,7 +322,7 @@ def main():
     subjects_order = {}
     groups_empty_space = {}
     teachers_empty_space = {}
-    file = 'ultaz4.txt'
+    file = 'ulaz4.txt'
 
     data = load_data('test_files/' + file, teachers_empty_space, groups_empty_space, subjects_order)
     matrix, free = set_up(len(data.classrooms))
@@ -330,11 +330,10 @@ def main():
 
     total, _, _, _, _ = hard_constraints_cost(matrix, data)
     print('Initial cost of hard constraints: {}'.format(total))
-
     evolutionary_algorithm(matrix, data, free, filled, groups_empty_space, teachers_empty_space, subjects_order)
-    print('STATISTICS')
-    show_statistics(matrix, data, subjects_order, groups_empty_space, teachers_empty_space)
-    simulated_hardening(matrix, data, free, filled, groups_empty_space, teachers_empty_space, subjects_order, file)
+    # print('STATISTICS')
+    # show_statistics(matrix, data, subjects_order, groups_empty_space, teachers_empty_space)
+    # simulated_hardening(matrix, data, free, filled, groups_empty_space, teachers_empty_space, subjects_order, file)
 
 
 if __name__ == '__main__':

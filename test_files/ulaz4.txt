@@ -1,0 +1,216 @@
+{
+    "Classrooms": {
+        "r": ["B1","B2","B3","B4","B5","G1","G2","G3","G4","G5","G6"]
+    },
+    "Classes": [
+        
+        {
+            "Subject": "AI", 
+            "Type": "L", 
+            "Teacher": "Dr. Mahto", 
+            "Groups": ["CS41", "CS42", "CS43"], 
+            "Classroom": "r", 
+            "Duration": "2"
+        },
+        {
+            "Subject": "Cyber Forensics", 
+            "Type": "L", 
+            "Teacher": "Dr. Preeti Soni", 
+            "Groups": ["CS41", "CS42", "CS43"], 
+            "Classroom": "r", 
+            "Duration": "2"
+        },
+        {
+            "Subject": "OOPs", 
+            "Type": "L", 
+            "Teacher": "Dr. Meghna", 
+            "Groups": ["CS21", "CS22"], 
+            "Classroom": "r", 
+            "Duration": "2"
+        },
+        {
+            "Subject": "Operating System", 
+            "Type": "L", 
+            "Teacher": "Dr. Pardeep", 
+            "Groups": ["CS31", "CS32"], 
+            "Classroom": "r", 
+            "Duration": "2"
+        },
+        {
+            "Subject": "Operating System", 
+            "Type": "P", 
+            "Teacher": "Dr. Pardeep", 
+            "Groups": ["CS31", "CS32"], 
+            "Classroom": "r", 
+            "Duration": "2"
+        },
+        {
+            "Subject": "TOC", 
+            "Type": "L", 
+            "Teacher": "Dr. Arun", 
+            "Groups": ["CS31", "CS32"], 
+            "Classroom": "r", 
+            "Duration": "2"
+        },
+        {
+            "Subject": "COA", 
+            "Type": "P", 
+            "Teacher": "Dr. Sangeeta", 
+            "Groups": ["CS21", "CS22"], 
+            "Classroom": "r", 
+            "Duration": "2"
+        },
+        {
+            "Subject": "Data Structures", 
+            "Type": "P", 
+            "Teacher": "Dr. Nitin", 
+            "Groups": ["CS21","CS22"], 
+            "Classroom": "r", 
+            "Duration": "2"
+        },
+        {
+            "Subject": "Discrete Structures", 
+            "Type": "L", 
+            "Teacher": "Dr. Priyanka", 
+            "Groups": ["CS21","CS22"], 
+            "Classroom": "r", 
+            "Duration": "2"
+        },
+        {
+            "Subject": "Algorithm Analysis", 
+            "Type": "P", 
+            "Teacher": "Dr. Khaleed", 
+            "Groups": ["CS31","CS32"], 
+            "Classroom": "r", 
+            "Duration": "2"
+        },
+        {
+            "Subject": "DBMS", 
+            "Type": "P", 
+            "Teacher": "Dr. Sidharth", 
+            "Groups": ["CS31", "CS32"], 
+            "Classroom": "r", 
+            "Duration": "2"
+        },
+        {
+            "Subject": "Compiler Design", 
+            "Type": "P", 
+            "Teacher": "Dr. Arun", 
+            "Groups": ["CS31", "CS32"], 
+            "Classroom": "r", 
+            "Duration": "2"
+        },
+        {
+            "Subject": "Computer Graphics", 
+            "Type": "P", 
+            "Teacher": "Dr. Naveen", 
+            "Groups": ["CS31", "CS32"], 
+            "Classroom": "r", 
+            "Duration": "2"
+        },
+        {
+            "Subject": "Distributed Systems", 
+            "Type": "L", 
+            "Teacher": "Dr. Mahto", 
+            "Groups": ["CS31", "CS32"], 
+            "Classroom": "r", 
+            "Duration": "2"
+        },
+        {
+            "Subject": "Digital Image Processing", 
+            "Type": "L", 
+            "Teacher": "Dr. Mallick", 
+            "Groups": ["CS31","CS32"], 
+            "Classroom": "r", 
+            "Duration": "2"
+        },
+        {
+            "Subject": "Computer Network", 
+            "Type": "P", 
+            "Teacher": "Dr. Tanuj Wala", 
+            "Groups": ["CS31","CS32"], 
+            "Classroom": "r", 
+            "Duration": "2"
+        },
+        {
+            "Subject": "Computer Programming", 
+            "Type": "L", 
+            "Teacher": "Dr. Pooja", 
+            "Groups": ["CS11","CS12"], 
+            "Classroom": "r", 
+            "Duration": "2"
+        },
+        {
+            "Subject": "Organisational Behaviour", 
+            "Type": "L", 
+            "Teacher": "Dr. Bhavna", 
+            "Groups": ["CS21","CS22"], 
+            "Classroom": "r", 
+            "Duration": "2"
+        },
+        {
+            "Subject": "Microprocessor and Interfacing", 
+            "Type": "L", 
+            "Teacher": "Dr. Meghna", 
+            "Groups": ["CS21","CS22"], 
+            "Classroom": "r", 
+            "Duration": "2"
+        },   
+        {
+            "Subject": "Digital Electronics", 
+            "Type": "L", 
+            "Teacher": "Dr. Amit", 
+            "Groups": ["CS21","CS22"], 
+            "Classroom": "r", 
+            "Duration": "2"
+        },   
+        {
+            "Subject": "Engineering Mathematics III", 
+            "Type": "L", 
+            "Teacher": "Dr. Suket", 
+            "Groups": ["CS21","CS22"], 
+            "Classroom": "r", 
+            "Duration": "2"
+        },   
+        {
+            "Subject": "Engineering Chemistry", 
+            "Type": "L", 
+            "Teacher": "Dr. Jai Prakash", 
+            "Groups": ["CS11","CS12"], 
+            "Classroom": "r", 
+            "Duration": "2"
+        },   
+        {
+            "Subject": "Basic Electrical Engineering", 
+            "Type": "L", 
+            "Teacher": "Dr. Bharti Koul", 
+            "Groups": ["CS11","CS12"], 
+            "Classroom": "r", 
+            "Duration": "2"
+        },   
+        {
+            "Subject": "Communication Skills", 
+            "Type": "L", 
+            "Teacher": "Dr. Yaseena", 
+            "Groups": ["CS11","CS12"], 
+            "Classroom": "r", 
+            "Duration": "2"
+        },   
+        {
+            "Subject": "Engineering Mathematics II", 
+            "Type": "L", 
+            "Teacher": "Dr. Ramesh Kumar Vats", 
+            "Groups": ["CS11","CS12"], 
+            "Classroom": "r", 
+            "Duration": "2"
+        },   
+        {
+            "Subject": "Material Science", 
+            "Type": "L", 
+            "Teacher": "Dr. Jitendra", 
+            "Groups": ["CS11","CS12"], 
+            "Classroom": "r", 
+            "Duration": "2"
+        }   
+    ]
+}

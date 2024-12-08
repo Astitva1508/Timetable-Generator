@@ -15,7 +15,6 @@ def subjects_order_cost(subjects_order):
 
         if times[0] != -1 and times[1] != -1:
             total += 1
-            # P after V
             if times[0] > times[1]:
                 cost += 1
 
@@ -125,8 +124,7 @@ def free_hour(matrix):
 
 def hard_constraints_cost(matrix, data):
     """
-    Calculates total cost of hard constraints: in every classroom is at most one class at a time, every class is in one
-    of his possible classrooms, every teacher holds at most one class at a time and every group attends at most one
+    Calculates total cost of hard constraints: in every classroom is at most one class at a time, every class is in one of his possible classrooms, every teacher holds at most one class at a time and every group attends at most one
     class at a time.
     For everything that does not satisfy these constraints, one is added to the cost.
     :return: total cost, cost per class, cost of teachers, cost of classrooms, cost of groups
@@ -141,19 +139,23 @@ def hard_constraints_cost(matrix, data):
     cost_group = 0
     for i in range(len(matrix)):
         for j in range(len(matrix[i])):
-            field = matrix[i][j]                                        # for every field in matrix
+            field = matrix[i][j]                                        
+            # for every field in matrix
             if field is not None:
-                c1 = data.classes[field]                                # take class from that field
+                c1 = data.classes[field]                                
+                # take class from that field
 
                 # calculate loss for classroom
                 if j not in c1.classrooms:
                     cost_classrooms += 1
                     cost_class[field] += 1
 
-                for k in range(j + 1, len(matrix[i])):                  # go through the end of row
+                for k in range(j + 1, len(matrix[i])):                  
+                    # go through the end of row
                     next_field = matrix[i][k]
                     if next_field is not None:
-                        c2 = data.classes[next_field]                   # take class of that field
+                        c2 = data.classes[next_field]                   
+                        # take class of that field
 
                         # calculate loss for teachers
                         if c1.teacher == c2.teacher:

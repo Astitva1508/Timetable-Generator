@@ -9,11 +9,15 @@ def load_data(file_path, teachers_empty_space, groups_empty_space, subjects_orde
     """
     Loads and processes input data, initialises helper structures.
     :param file_path: path to file with input data
+
     :param teachers_empty_space: dictionary where key = name of the teacher, values = list of rows where it is in
+
     :param groups_empty_space: dictionary where key = group index, values = list of rows where it is in
+
     :param subjects_order: dictionary where key = (name of the subject, index of the group), value = [int, int, int]
     where ints represent start times (row in matrix) for types of classes P, V and L respectively. If start time is -1
     it means that that subject does not have that type of class.
+    
     :return: Data(groups, teachers, classes, classrooms)
     """
     with open(file_path) as file:
@@ -76,14 +80,15 @@ def load_data(file_path, teachers_empty_space, groups_empty_space, subjects_orde
 
         class_groups = cl.groups
         index_groups = []
+        
         for name, index in groups.items():
             if name in class_groups:
                 # initialise order of subjects
                 if (cl.subject, index) not in subjects_order:
+                    # index for L, V, P
                     subjects_order[(cl.subject, index)] = [-1, -1, -1]
                 index_groups.append(index)
         cl.groups = index_groups
-
     return Data(groups, teachers, classes, classrooms)
 
 
@@ -101,9 +106,14 @@ def set_up(num_of_columns):
     free = []
 
     # initialise free dict as all the fields from matrix
+    # free contains (timeslot,classroom)
+
+    # Representation of time : [0,39]
     for i in range(len(matrix)):
         for j in range(len(matrix[i])):
             free.append((i, j))
+    # (x,y) -> xth time par yth room
+    
     return matrix, free
 
 
