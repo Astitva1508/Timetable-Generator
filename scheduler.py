@@ -1,6 +1,6 @@
 import random
 from operator import itemgetter
-from utils import load_data, show_timetable, set_up, show_statistics, write_solution_to_file
+from utils import load_data, show_timetable, set_up, show_statistics, write_solution_to_file, generate_timetable
 from costs import check_hard_constraints, hard_constraints_cost, empty_space_groups_cost, empty_space_teachers_cost, \
     free_hour
 import copy
@@ -13,48 +13,48 @@ def initial_population(data, matrix, free, filled, groups_empty_space, teachers_
     classroom.
     """
     classes = data.classes
+    for x in range(3):
+        for index, classs in classes.items():
+            ind = 0
+            # ind = random.randrange(len(free) - int(classs.duration))
+            while True:
+                start_field = free[ind]
 
-    for index, classs in classes.items():
-        ind = 0
-        # ind = random.randrange(len(free) - int(classs.duration))
-        while True:
-            start_field = free[ind]
-
-            # check if class won't start one day and end on the next
-            start_time = start_field[0]
-            end_time = start_time + int(classs.duration) - 1
-            if start_time % 8 > end_time % 8:
-                ind += 1
-                continue
-
-            found = True
-            # check if whole block for the class is free
-            for i in range(1, int(classs.duration)):
-                field = (i + start_time, start_field[1])
-                if field not in free:
-                    found = False
+                # check if class won't start one day and end on the next
+                start_time = start_field[0]
+                end_time = start_time + int(classs.duration) - 1
+                if start_time % 8 > end_time % 8:
                     ind += 1
+                    continue
+
+                found = True
+                # check if whole block for the class is free
+                for i in range(1, int(classs.duration)):
+                    field = (i + start_time, start_field[1])
+                    if field not in free:
+                        found = False
+                        ind += 1
+                        break
+
+                # secure that classroom fits
+                if start_field[1] not in classs.classrooms:
+                    ind += 1
+                    continue
+
+                if found:
+                    group_index = classs.groups
+                    # add order of the subjects for group
+                    insert_order(subjects_order, classs.subject, group_index, classs.type, start_time)
+                        # add times of the class for group
+                    for i in range(int(classs.duration)):
+                        groups_empty_space[group_index].append(i + start_time)
+
+                    for i in range(int(classs.duration)):
+                        filled.setdefault(index, []).append((i + start_time, start_field[1]))        # add to filled
+                        free.remove((i + start_time, start_field[1]))                                # remove from free
+                        # add times of the class for teachers
+                        teachers_empty_space[classs.teacher].append(i + start_time)
                     break
-
-            # secure that classroom fits
-            if start_field[1] not in classs.classrooms:
-                ind += 1
-                continue
-
-            if found:
-                group_index = classs.groups
-                # add order of the subjects for group
-                insert_order(subjects_order, classs.subject, group_index, classs.type, start_time)
-                    # add times of the class for group
-                for i in range(int(classs.duration)):
-                    groups_empty_space[group_index].append(i + start_time)
-
-                for i in range(int(classs.duration)):
-                    filled.setdefault(index, []).append((i + start_time, start_field[1]))        # add to filled
-                    free.remove((i + start_time, start_field[1]))                                # remove from free
-                    # add times of the class for teachers
-                    teachers_empty_space[classs.teacher].append(i + start_time)
-                break
 
     # fill the matrix
     for index, fields_list in filled.items():
@@ -304,6 +304,32 @@ def simulated_hardening(matrix, data, free, filled, groups_empty_space, teachers
     write_solution_to_file(matrix, data, filled, file, groups_empty_space, teachers_empty_space, subjects_order)
 
 
+def menu(matrix, data):
+    while True:
+        print("Menu:")
+        print("1. Generate timetable for a Teacher")
+        print("2. Generate timetable for a Group")
+        print("3. Generate timetable for a Room")
+        print("4. Exit")
+
+        choice = input("Enter your choice (1/2/3/4): ").strip()
+
+        if choice == "1":
+            teacher_name = input("Enter the Teacher's name: ").strip()
+            generate_timetable(matrix, data,teacher=teacher_name)
+        elif choice == "2":
+            group_name = input("Enter the Group name: ").strip()
+            generate_timetable(matrix, data,group=group_name)
+        elif choice == "3":
+            room_name = input("Enter the Room name: ").strip()
+            generate_timetable(matrix, data,room=room_name)
+        elif choice == "4":
+            print("Exiting program. Goodbye!")
+            break
+        else:
+            print("Invalid choice. Please try again.")
+
+
 def main():
     """
     free = [(row, column)...] - list of free fields (row, column) in matrix
@@ -333,6 +359,9 @@ def main():
     print('STATISTICS')
     show_statistics(matrix, data, subjects_order, groups_empty_space, teachers_empty_space)
     simulated_hardening(matrix, data, free, filled, groups_empty_space, teachers_empty_space, subjects_order, file)
+
+    menu(matrix, data)
+
 
 
 if __name__ == '__main__':

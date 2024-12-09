@@ -2,15 +2,15 @@
 Timetable generator for university schedule implemented in Python using *genetic algorithms*.
 
 ### Abstract
-This project implements one of possible solutions for generating university schedule. 
+This project implements one of possible solutions for generating university schedule for our college National Institute of Technology Hamirpur.
 The proposed solution is based on methods of evolutionary computing, uses *(1+1) evolutionary strategy* and *simulated hardening*. 
 The success of solution is estimated on fulfillment of given constraints and criteria. 
 Results of testing the algorithm show that all hard constraints are satisfied, while additional criteria are optimized to a certain extent.
 
 ### Problem 
-The assignment is to find generic solution that will facilitate generating schedule for university (this specific problem is adjusted to `Faculty of Computing in Belgrade`). 
+The assignment is to find generic solution that will facilitate generating schedule for university (this specific problem is adjusted to `National Institute of Technology Hamirpur`). 
 
-Each class on faculty is represented as block (lasts arbitrary number of hours, mostly form 1 to 4). 
+Each class on faculty is represented as block (lasts arbitrary number of hours, mostly from 1 to 2). 
 For conducting every class required are: *teacher*, *classroom*, *start time*, *duration* and *groups* which attend the class. It is also know in advance which groups attend which class and all classrooms are the same size (each group can fit to a classroom). 
 <br />Teaching is done on faculty from 9AM until 9PM on each work day. 
 

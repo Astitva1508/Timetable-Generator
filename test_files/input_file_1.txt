@@ -10,7 +10,7 @@
             "Teacher": "Dr. Mahto", 
             "Groups": ["CS41", "CS42", "CS43"], 
             "Classroom": "r", 
-            "Duration": "2"
+            "Duration": "1"
         },
         {
             "Subject": "Cyber Forensics", 
@@ -18,7 +18,7 @@
             "Teacher": "Dr. Preeti Soni", 
             "Groups": ["CS41", "CS42", "CS43"], 
             "Classroom": "r", 
-            "Duration": "2"
+            "Duration": "1"
         },
         {
             "Subject": "OOPs", 
@@ -26,7 +26,7 @@
             "Teacher": "Dr. Meghna", 
             "Groups": ["CS21", "CS22"], 
             "Classroom": "r", 
-            "Duration": "2"
+            "Duration": "1"
         },
         {
             "Subject": "Operating System", 
@@ -34,7 +34,7 @@
             "Teacher": "Dr. Pardeep", 
             "Groups": ["CS31", "CS32"], 
             "Classroom": "r", 
-            "Duration": "2"
+            "Duration": "1"
         },
         {
             "Subject": "Operating System", 
@@ -42,7 +42,7 @@
             "Teacher": "Dr. Pardeep", 
             "Groups": ["CS31", "CS32"], 
             "Classroom": "r", 
-            "Duration": "2"
+            "Duration": "1"
         },
         {
             "Subject": "TOC", 
@@ -50,7 +50,7 @@
             "Teacher": "Dr. Arun", 
             "Groups": ["CS31", "CS32"], 
             "Classroom": "r", 
-            "Duration": "2"
+            "Duration": "1"
         },
         {
             "Subject": "COA", 
@@ -58,7 +58,7 @@
             "Teacher": "Dr. Sangeeta", 
             "Groups": ["CS21", "CS22"], 
             "Classroom": "r", 
-            "Duration": "2"
+            "Duration": "1"
         },
         {
             "Subject": "Data Structures", 
@@ -66,7 +66,7 @@
             "Teacher": "Dr. Nitin", 
             "Groups": ["CS21","CS22"], 
             "Classroom": "r", 
-            "Duration": "2"
+            "Duration": "1"
         },
         {
             "Subject": "Discrete Structures", 
@@ -74,7 +74,7 @@
             "Teacher": "Dr. Priyanka", 
             "Groups": ["CS21","CS22"], 
             "Classroom": "r", 
-            "Duration": "2"
+            "Duration": "1"
         },
         {
             "Subject": "Algorithm Analysis", 
@@ -82,7 +82,7 @@
             "Teacher": "Dr. Khaleed", 
             "Groups": ["CS31","CS32"], 
             "Classroom": "r", 
-            "Duration": "2"
+            "Duration": "1"
         },
         {
             "Subject": "DBMS", 
@@ -90,7 +90,7 @@
             "Teacher": "Dr. Sidharth", 
             "Groups": ["CS31", "CS32"], 
             "Classroom": "r", 
-            "Duration": "2"
+            "Duration": "1"
         },
         {
             "Subject": "Compiler Design", 
@@ -98,7 +98,7 @@
             "Teacher": "Dr. Arun", 
             "Groups": ["CS31", "CS32"], 
             "Classroom": "r", 
-            "Duration": "2"
+            "Duration": "1"
         },
         {
             "Subject": "Computer Graphics", 
@@ -106,7 +106,7 @@
             "Teacher": "Dr. Naveen", 
             "Groups": ["CS31", "CS32"], 
             "Classroom": "r", 
-            "Duration": "2"
+            "Duration": "1"
         },
         {
             "Subject": "Distributed Systems", 
@@ -114,7 +114,7 @@
             "Teacher": "Dr. Mahto", 
             "Groups": ["CS31", "CS32"], 
             "Classroom": "r", 
-            "Duration": "2"
+            "Duration": "1"
         },
         {
             "Subject": "Digital Image Processing", 
@@ -122,7 +122,7 @@
             "Teacher": "Dr. Mallick", 
             "Groups": ["CS31","CS32"], 
             "Classroom": "r", 
-            "Duration": "2"
+            "Duration": "1"
         },
         {
             "Subject": "Computer Network", 
@@ -130,7 +130,7 @@
             "Teacher": "Dr. Tanuj Wala", 
             "Groups": ["CS31","CS32"], 
             "Classroom": "r", 
-            "Duration": "2"
+            "Duration": "1"
         },
         {
             "Subject": "Computer Programming", 
@@ -138,7 +138,7 @@
             "Teacher": "Dr. Pooja", 
             "Groups": ["CS11","CS12"], 
             "Classroom": "r", 
-            "Duration": "2"
+            "Duration": "1"
         },
         {
             "Subject": "Organisational Behaviour", 
@@ -146,7 +146,7 @@
             "Teacher": "Dr. Bhavna", 
             "Groups": ["CS21","CS22"], 
             "Classroom": "r", 
-            "Duration": "2"
+            "Duration": "1"
         },
         {
             "Subject": "Microprocessor and Interfacing", 
@@ -154,7 +154,7 @@
             "Teacher": "Dr. Meghna", 
             "Groups": ["CS21","CS22"], 
             "Classroom": "r", 
-            "Duration": "2"
+            "Duration": "1"
         },   
         {
             "Subject": "Digital Electronics", 
@@ -162,7 +162,7 @@
             "Teacher": "Dr. Amit", 
             "Groups": ["CS21","CS22"], 
             "Classroom": "r", 
-            "Duration": "2"
+            "Duration": "1"
         },   
         {
             "Subject": "Engineering Mathematics III", 
@@ -170,7 +170,7 @@
             "Teacher": "Dr. Suket", 
             "Groups": ["CS21","CS22"], 
             "Classroom": "r", 
-            "Duration": "2"
+            "Duration": "1"
         },   
         {
             "Subject": "Engineering Chemistry", 
@@ -178,7 +178,7 @@
             "Teacher": "Dr. Jai Prakash", 
             "Groups": ["CS11","CS12"], 
             "Classroom": "r", 
-            "Duration": "2"
+            "Duration": "1"
         },   
         {
             "Subject": "Basic Electrical Engineering", 
@@ -186,7 +186,7 @@
             "Teacher": "Dr. Bharti Koul", 
             "Groups": ["CS11","CS12"], 
             "Classroom": "r", 
-            "Duration": "2"
+            "Duration": "1"
         },   
         {
             "Subject": "Communication Skills", 
@@ -194,7 +194,7 @@
             "Teacher": "Dr. Yaseena", 
             "Groups": ["CS11","CS12"], 
             "Classroom": "r", 
-            "Duration": "2"
+            "Duration": "1"
         },   
         {
             "Subject": "Engineering Mathematics II", 
@@ -202,7 +202,7 @@
             "Teacher": "Dr. Ramesh Kumar Vats", 
             "Groups": ["CS11","CS12"], 
             "Classroom": "r", 
-            "Duration": "2"
+            "Duration": "1"
         },   
         {
             "Subject": "Material Science", 
@@ -210,7 +210,7 @@
             "Teacher": "Dr. Jitendra", 
             "Groups": ["CS11","CS12"], 
             "Classroom": "r", 
-            "Duration": "2"
+            "Duration": "1"
         }   
     ]
 }

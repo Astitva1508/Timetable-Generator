@@ -221,3 +221,80 @@ def show_statistics(matrix, data, subjects_order, groups_empty_space, teachers_e
         print('Free term ->', f_hour)
     else:
         print('NO hours without classes.')
+
+def get_teacher_timetable(matrix, data,teacher_name):
+    n = len(matrix)
+    m = len(matrix[0])
+    teacher_matrix = [[None for x in range(8)] for y in range(5)]
+    for i in range(n):
+        for j in range(m):
+            if matrix[i][j]==None:
+                continue
+            class_idx = matrix[i][j]
+            if data.classes[class_idx].teacher!=teacher_name:
+                continue
+            teacher_matrix[i//8][i%8] = class_idx
+    show_filer_timetable(teacher_matrix)
+
+def get_group_timetable(matrix, data, group_name):
+    n = len(matrix)
+    m = len(matrix[0])
+    group_idx = data.groups[group_name]
+    group_matrix = [[None for x in range(8)] for y in range(5)]
+    for i in range(n):
+        for j in range(m):
+            if matrix[i][j]==None:
+                continue
+            class_idx = matrix[i][j]
+            if data.classes[class_idx].groups!=group_idx:
+                continue
+            group_matrix[i//8][i%8] = class_idx
+    show_filer_timetable(group_matrix)
+
+def get_room_timetable(matrix, data, room_idx):
+    n = len(matrix)
+    m = len(matrix[0])
+    room_matrix = [[None for x in range(8)] for y in range(5)]
+    for i in range(n):
+            if matrix[i][int(room_idx)]==None:
+                continue
+            class_idx = matrix[i][int(room_idx)]
+            room_matrix[i//8][i%8] = class_idx
+    show_filer_timetable(room_matrix)
+
+def show_filer_timetable(matrix):
+    """
+    Prints timetable matrix.
+    """
+    days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday']
+    hours = [9, 10, 11, 12, 13, 14, 15, 16]
+
+    # print heading for times
+    for i in range(len(matrix[0])):
+        if i == 0:
+            print('{:13s} {:9s}'.format('', str(hours[i])), end='')
+        else:
+            print('{:9s}'.format(str(hours[i])), end='')
+    print()
+
+    for i in range(len(matrix)):
+        day = days[i]
+        print('{:10s} -> '.format(day), end='')
+        for j in range(len(matrix[i])):
+            print('{:8s} '.format(str(matrix[i][j])), end='')
+        print()
+
+def generate_timetable(matrix, data,teacher=None, group=None, room=None):
+    print("\n--- Generated Timetable ---")
+    if teacher:
+        get_teacher_timetable(matrix,data,teacher)
+        print(f"Timetable for Teacher: {teacher}")
+    elif group:
+        get_group_timetable(matrix,data,group)
+        print(f"Timetable for Group: {group}")
+    elif room:
+        get_room_timetable(matrix, data, room)
+        print(f"Timetable for Room: {room}")
+    else:
+        print("No data provided.")
+    print("--------------------------\n")
